@@ -4,8 +4,10 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
+import { StopPage } from '../pages/stop/stop';
+import { TogoPage } from '../pages/togo/togo';
+import { FavPage } from '../pages/favorite/favorite';
+import { UserPage } from '../pages/user/user';
 
 
 @Component({
@@ -15,7 +17,9 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage: any = HelloIonicPage;
+
+  /////// we have to write the if statement ///////
+  rootPage: any = FavPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
@@ -26,8 +30,10 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'Stops Nearby', component: StopPage },
+      { title: 'Where To Go', component: TogoPage },
+      { title: 'Favorite', component: FavPage },
+      { title: 'Login', component: UserPage }
     ];
   }
 
