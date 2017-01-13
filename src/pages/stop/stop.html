@@ -10,16 +10,11 @@
 
 <ion-content padding>
 
-  <h3>Get all stops nearby</h3>
-
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
-
+  <h3>Get all stops nearby<br>
+  or<br></h3>
+  <ion-item>
+    <ion-input placeholder="Bus Number"></ion-input>
+  </ion-item>
+  <button ion-button color="primary" (click)="searchBusStop()"><i class="fa fa-search" aria-hidden="true"></i></button>
+  
 </ion-content>
