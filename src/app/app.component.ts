@@ -9,7 +9,6 @@ import { TogoPage } from '../pages/togo/togo';
 import { FavPage } from '../pages/favorite/favorite';
 import { UserPage } from '../pages/user/user';
 
-
 @Component({
   templateUrl: 'app.html'
 })
