@@ -1,11 +1,11 @@
 <ion-header>
   <ion-navbar text-center>
-
+    
     <ion-title>
       Nearby Stops
     </ion-title>
 
-    <button ion-button (click)="showOnMap($event)">
+    <button ion-button (click)="showOnMap()">
       <ion-icon name="map"></ion-icon>
     </button>
 
@@ -14,7 +14,9 @@
 
 <ion-content padding>
   <ion-list>
-      <ion-icon name="bus"></ion-icon>
-      <!--{{ item.title }} {{ item.distance }} meters-->
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-icon name="bus" item-left></ion-icon>
+      {{item.title}} {{item.distance}} meters
+    </button>
   </ion-list>
 </ion-content>
