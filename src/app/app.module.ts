@@ -2,7 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { StopPage } from '../pages/stop/stop';
-import { ItemDetailsPage } from '../pages/item-details/item-details';
+// import { StopDetailPage } from '../pages/stop-detail/stop-detail';
+import { NearbyListPage } from '../pages/nearby-list/nearby-list';
 import { TogoPage } from '../pages/togo/togo';
 import { FavPage } from '../pages/favorite/favorite';
 import { UserPage } from '../pages/user/user';
@@ -11,7 +12,8 @@ import { UserPage } from '../pages/user/user';
   declarations: [
     MyApp,
     StopPage,
-    ItemDetailsPage,
+    // StopDetailPage,
+    NearbyListPage,
     TogoPage,
     FavPage,
     UserPage
@@ -23,7 +25,8 @@ import { UserPage } from '../pages/user/user';
   entryComponents: [
     MyApp,
     StopPage,
-    ItemDetailsPage,
+    // StopDetailPage,
+    NearbyListPage,
     TogoPage,
     FavPage,
     UserPage

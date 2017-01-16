@@ -17,7 +17,9 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
 
-  /////// we have to write the if statement ///////
+  // TODO: 
+  // if(!login) { show StopPage }
+  // else { show FavPage }
   rootPage: any = FavPage;
   pages: Array<{title: string, component: any}>;
 
