@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-// import { StopDetailPage } from '../stop-detail/stop-detail';
+import { StopDetailPage } from '../stop-detail/stop-detail'
 
 @Component({
   selector: 'page-nearby-list',
@@ -19,17 +19,22 @@ export class NearbyListPage {
     this.selectedItem = navParams.get('item');
 
     // this.items = [];
-    // for(let i = 1; i < buses.length(); i++) {
+    // for(let i = 1; i < buses.length()+1; i++) {
     //     this.items.push({
     //         title: buses.number,
     //         distance: buses.distance,
-    //         icon: 'bus'
     //     });
     // }
     this.items = [{ title: '123', distance: '50'}, { title: '106', distance: '100' }];
   }
 
   showOnMap(event) {
-    // this.nav.push(StopDetailPage, { data: this.items });
+    // this.nav.push(ShowMapPage, { data: this.items });
+  }
+
+  itemTapped(event, item) {
+    this.nav.push(StopDetailPage, {
+      title: item.title
+    })
   }
 }
