@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar text-center>
+
+    <ion-title>
+      Nearby Stops
+    </ion-title>
+
+    <button ion-button (click)="showOnMap($event)">
+      <ion-icon name="map"></ion-icon>
+    </button>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-icon name="bus"></ion-icon>
+      <!--{{ item.title }} {{ item.distance }} meters-->
+  </ion-list>
+</ion-content>
