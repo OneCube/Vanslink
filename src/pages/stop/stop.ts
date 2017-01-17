@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { NearbyListPage } from '../nearby-list/nearby-list';
+import { NearbyListPage } from '../stop/nearby-list/nearby-list';
 
 @Component({
   selector: 'page-stop',
@@ -16,10 +16,7 @@ export class StopPage {
   }
 
   searchBusNumber(busNum) {
-    
-    // this.nav.push(StopDetailPage, {
-    //   // TODO: what should I put here
-    // });
+    // this.nav.push()
   }
 
   getNearby() {
