@@ -1,9 +1,12 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { Translink } from '../providers/translink';
 import { MyApp } from './app.component';
 import { StopPage } from '../pages/stop/stop';
-import { StopDetailPage } from '../pages/stop-detail/stop-detail';
-import { NearbyListPage } from '../pages/nearby-list/nearby-list';
+import { StopDestinationPage } from '../pages/stop/stop-destination/stop-destination';
+import { StopPathPage } from '../pages/stop/stop-path/stop-path';
+//import { StopDetailPage } from '../pages/stop-info/stop-detail/stop-detail';
+import { NearbyListPage } from '../pages/stop/nearby-list/nearby-list';
 import { TogoPage } from '../pages/togo/togo';
 import { FavPage } from '../pages/favorite/favorite';
 import { UserPage } from '../pages/user/user';
@@ -12,7 +15,9 @@ import { UserPage } from '../pages/user/user';
   declarations: [
     MyApp,
     StopPage,
-    StopDetailPage,
+    StopDestinationPage,
+    StopPathPage,
+    // StopDetailPage,
     NearbyListPage,
     TogoPage,
     FavPage,
@@ -25,12 +30,14 @@ import { UserPage } from '../pages/user/user';
   entryComponents: [
     MyApp,
     StopPage,
-    StopDetailPage,
+    StopDestinationPage,
+    StopPathPage,
+    // StopDetailPage,
     NearbyListPage,
     TogoPage,
     FavPage,
     UserPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Translink]
 })
 export class AppModule {}

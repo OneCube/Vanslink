@@ -1,15 +1,16 @@
 <ion-header>
   <ion-navbar text-center>
-    <ion-title>{{ selectedItem }}</ion-title>
+    <ion-title>{{ item.title }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>No. {{ selectedItem }}</h3>
-  <p>Where do you want to go?</p>
+  <button ion-button clear (click)="changeDestination()">
+      Change destination
+  </button>
   <ion-list>
       <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      {{ item.destination }}
+      {{ item.stop }}
     </button>
   </ion-list>
 </ion-content>
